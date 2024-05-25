@@ -19,7 +19,7 @@ var oldcontainsDuplicate = function (nums) {
  * @param {number[]} nums
  * @return {boolean}
  */
-var containsDuplicate = function (nums) {
+var containsDuplicate_foreach = function (nums) {
   var unique = [];
 
   var value = false;
@@ -28,22 +28,42 @@ var containsDuplicate = function (nums) {
       value = true;
       return true;
     } else {
-      console.log(num);
+      console.log(unique);
       unique.push(num);
     }
-    value = false;
-    return false;
+    // value = false;
+    return true;
   });
 
   // console.log(value);
   return value;
 };
 
+var containsDuplicate_forloop = function (nums) {
+  var unique = [];
 
+  // var value = false;
+
+  for (var i = 0; i < nums.length; i++) {
+    console.log(i);
+    if (unique.includes(nums[i])) {
+      return true;
+    } else {
+      console.log(unique);
+      unique.push(nums[i]);
+    }
+  }
+  return false;
+};
+
+var containsDuplicate = (nums) => {
+  const numsSet = new Set(nums);
+  const isEqual = numsSet.size === nums.length;
+  return !isEqual;
+};
 
 var checkzero = function (num) {
-    var unique = [0]
-    
- }
+  var unique = [0];
+};
 // console.log(containsDuplicate([1, 2, 3, 1]));
-console.log(containsDuplicate([0, 4, 5, 0, 3, 6]));
+console.log(containsDuplicate([0, 4, 5, 9, 3, 6]));
