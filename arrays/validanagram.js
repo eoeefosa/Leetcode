@@ -33,25 +33,11 @@ class Solution {
  * @return {boolean}
  */
 var isAnagram = function (s, t) {
-  if (s.length !== t.length) {
-    return false;
+  console.log(s.sort);
+  if (s.sort === t.sort) {
+    return true;
   }
-  const smap = {};
-  const tmap = {};
-
-  for (var i = 0; i < s.length; i++) {
-    smap[s[i]] = 1 + (smap[s[i]] || 0);
-    tmap[t[i]] = 1 + (tmap[t[i]] || 0);
-  }
-
-  for (const key in smap) {
-    console.log(key);
-    if (smap[key] !== tmap[key]) {
-      console.log(false);
-      return false;
-    }
-  }
-  return true;
+  return false;
 };
 
 var isAnagram_for = function (s, t) {
