@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Arrays</title>
+  </head>
+  <body>
+    <h2>JavaScript Arrays</h2>
+
+    <p>
+      The length property provides an easy way to append new elements to an
+      array without using the push() method.
+    </p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo" style="display: block"></p>
+    <script>
+      const fruits = ["Banana", "Orange", "Apple"];
+
+      document.getElementById("demo").innerHTML = fruits;
+      function myFunction() {
+        const lemonvalue = fruits.length - 3 == 0 ? "" : fruits.length - 3;
+        fruits[fruits.length] = "lemon" + lemonvalue;
+        document.getElementById("demo").innerHTML = fruits;
+      }
+    </script>
+  </body>
+</html>
