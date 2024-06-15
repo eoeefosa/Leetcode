@@ -15,3 +15,5 @@ const roads = [
     "Shop-Town Hall",
 ];
   
+
+roads.reduce();

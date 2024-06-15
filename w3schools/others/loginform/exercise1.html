@@ -1,0 +1,54 @@
+<!-- Create a login screen with phone number and password -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form
+      action="#"
+      method="post
+    "
+    >
+      <!-- imgContainer -->
+      <div class="imgcontainer">
+        <img src="img_avatar2.png" alt="Avatar" class="avatar" />
+      </div>
+
+      <!-- Field container for phonenumber and password and login button  with remeber me-->
+      <div class="container">
+        <!-- phone number field -->
+        <label for="phone_no"><b>Phone number</b></label>
+        <input type="tel" name="phone_no" id="phone_no" required />
+
+        <!-- Pin field -->
+        <label for="pin"><b>Pin</b></label>
+        <input
+          type="number"
+          placeholder="Enter your pin"
+          name="pin"
+          required
+          min="999"
+          max="10000"
+        />
+
+        <!-- Login field -->
+        <button type="submit">Login</button>
+
+        <!-- Remeber me checkbox -->
+        <label>
+          <input type="checkbox" checked="checked" name="remember" />
+          Remember me
+        </label>
+      </div>
+
+      <!-- Cancel and forget password container -->
+      <div class="container" style="background-color: #f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span>Forgot <a href="#"> Password?</a></span>
+      </div>
+    </form>
+  </body>
+</html>
